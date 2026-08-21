@@ -1,0 +1,61 @@
+name: Bug report
+description: Something broke, froze, or locked you in a way it shouldn't have
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. This app takes over your keyboard and edits your hosts file — if it misbehaved, I want to know in detail.
+
+        **If you are locked out right now:** press `Ctrl+Shift+Q`. It force-quits everything, no UAC, no questions. If sites are still blocked afterwards, open the app → Settings → **RESET HOSTS NOW**.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: What were you doing?
+      options:
+        - Focus session (Pomodoro / deep work / sprint)
+        - Exam mode — Companion (real browser)
+        - Exam mode — Embedded (locked webview)
+        - Installing / first launch
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect instead?
+      placeholder: "The HUD disappeared about 10 seconds after the session started. I expected it to stay on top."
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Can you make it happen again?
+      description: Step by step, if you can. "Happened once, never again" is still worth reporting — say so.
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 23H2"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Brutal Focus version
+      placeholder: "v0.1.0"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log files (optional, but they solve bugs fast)
+      description: |
+        Paste the contents of these if they exist — they are plain text, local only, and contain no personal data:
+        `%LOCALAPPDATA%\brutal-focus\diag.log`
+        `%LOCALAPPDATA%\brutal-focus\panic.log`
+      render: shell
+  - type: checkboxes
+    id: hosts
+    attributes:
+      label: Is anything still blocked?
+      options:
+        - label: Sites are still blocked after the app closed (hosts file may need resetting)

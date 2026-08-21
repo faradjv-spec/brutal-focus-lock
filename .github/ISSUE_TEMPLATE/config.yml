@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: I'm locked out right now
+    url: https://github.com/faradjv-spec/brutal-focus-lock#emergency-exit
+    about: Press Ctrl+Shift+Q. It always works, needs no admin rights, and is never blocked.

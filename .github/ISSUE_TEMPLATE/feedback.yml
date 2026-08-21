@@ -1,0 +1,46 @@
+name: Feedback — did it actually work?
+description: Tell me whether the lock held, or where it failed you
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most useful thing you can send me. v0.1.0 has no telemetry by design, so I know literally nothing about how anyone uses this — you are the only source of truth.
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: How did your session end?
+      options:
+        - I completed it — the timer ran out
+        - I typed the panic phrase and abandoned it
+        - I hit Ctrl+Shift+Q
+        - It crashed or broke before I finished
+        - I never got it installed
+    validations:
+      required: true
+  - type: textarea
+    id: moment
+    attributes:
+      label: Was there a moment you tried to quit and couldn't?
+      description: This is the whole product. If the lock held when you wanted out, tell me what that was like. If you found a way around it, definitely tell me.
+    validations:
+      required: true
+  - type: textarea
+    id: phrase
+    attributes:
+      label: Did the panic phrase land, or did it feel silly?
+      description: Honest answers only — "it felt like a gimmick" is useful.
+  - type: dropdown
+    id: who
+    attributes:
+      label: What were you using it for?
+      options:
+        - University / school exam
+        - Studying or coursework
+        - Professional certification exam (CFA, bar, PMP, medical, etc.)
+        - Work — writing, coding, deep focus
+        - Something else
+  - type: textarea
+    id: missing
+    attributes:
+      label: What one thing would make you use this again next week?
