@@ -2,9 +2,9 @@
 
 **Every other focus app asks. This one enforces.**
 
-A Windows focus and exam-lockdown tool that holds your session at the operating-system level — keyboard hook, hosts-file blocking, always-on-top HUD — with a typed confession as the only early exit.
+A Windows focus and exam-lockdown tool with a floating timer, optional browser blocking, and stricter exam sessions. You can always use `Ctrl+Shift+Q` as an emergency exit.
 
-**[⬇ Download the latest release](../../releases/latest)** · Windows 10/11 · Free · Runs 100% offline
+**[⬇ Download the latest release](../../releases/latest)** · Windows 10/11 · Free · No account or telemetry
 
 ---
 
@@ -12,25 +12,20 @@ A Windows focus and exam-lockdown tool that holds your session at the operating-
 
 Forest can be closed. Freedom can be uninstalled. Cold Turkey stops at the browser. All of them assume you'll cooperate with yourself. This one is built for the twenty minutes where you won't.
 
-| | Can you close it mid-session? | Where it stops |
-|---|---|---|
-| Forest | Yes — the tree dies, nothing else happens | Your conscience |
-| Freedom | Yes — quit or uninstall | App + site blocking |
-| Cold Turkey | Hard, on the paid tier | The browser |
-| **Brutal Focus** | **No — the hook is live, and the exit costs a typed confession** | **Keyboard, network, every browser at once** |
+Focus sessions can be stopped from the timer. Exam sessions add a keyboard hook and a panic phrase for ordinary early exit. The emergency shortcut remains available in either mode.
 
-## Three layers of enforcement
+## What each mode enforces
 
-- **OS · Keyboard** — Win32 low-level hook kills Alt+Tab, Win, Win+D, Win+Tab, Alt+F4, Ctrl+Esc.
-- **OS · Network** — your blocklist goes into the Windows hosts file. Blocked everywhere, not just one browser. Backed up and restored on session end, even after a crash.
-- **Browser** — optional companion extension blocks redirect-sneaking inside Chrome, Edge and Brave.
+- **Focus session** — floating timer; your blocklist is enforced in supported browsers only when the optional companion extension shows **PAIRED**. Without it, the list is a visible reminder, not an active block.
+- **Exam session** — keyboard hook limits task switching. With a nonempty blocklist and your approval of the Windows prompt, the app adds hosts-file entries and removes them when the session ends.
+- **Exam browser choice** — use your normal browser for the best sign-in compatibility, or opt into the locked app window. The optional extension can add browser-side blocking in your normal browser.
 
 ## The contract
 
 1. The timer is the only clean exit.
 2. Quitting early costs a 25–60 character panic phrase built from your own stated goals.
 3. The anti-streak never forgets. Only a completed session resets it.
-4. Contradictory settings resolve toward the stricter option.
+4. The exam setup shows which browser will open and what blocking is available before you start.
 5. Killing your browser mid-exam starts a 30-second countdown.
 6. **`Ctrl+Shift+Q` always works.** Safety is never gated.
 
@@ -38,7 +33,7 @@ Forest can be closed. Freedom can be uninstalled. Cold Turkey stops at the brows
 
 Press **`Ctrl+Shift+Q`**. It force-quits everything instantly — no admin prompt, no phrase, and the keyboard hook never intercepts it.
 
-Sites still blocked afterwards? Open Settings → **RESET HOSTS NOW**.
+Sites still blocked afterwards? Reopen the app and use Settings → **RESET HOSTS NOW**.
 
 ## Install
 
@@ -46,11 +41,11 @@ Download the `.msi` from [Releases](../../releases/latest). Windows will show a 
 
 ## Privacy
 
-No account. No telemetry. No analytics. No network requests. The camera feed stays in the renderer and never touches a network. The only elevated action is writing and restoring your hosts file.
+No account, telemetry, or analytics. Settings and camera frames stay on your machine. Opening an exam website uses your internet connection; the optional extension talks to the app over localhost. The only elevated action is writing and restoring your hosts file.
 
 ## Feedback
 
-v0.1.0 is the first public release and there is no telemetry, so I know nothing about how anyone uses this. [Tell me what happened](../../issues/new/choose) — especially if the lock held when you wanted out, or if you found a way around it.
+This is early software. [Tell me what happened](../../issues/new/choose) — especially if a website or camera did not appear, or the lock held when you wanted out.
 
 ---
 
