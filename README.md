@@ -33,7 +33,7 @@ Focus sessions can be stopped from the timer. Exam sessions add a keyboard hook 
 
 Press **`Ctrl+Shift+Q`**. It force-quits everything instantly — no admin prompt, no phrase, and the keyboard hook never intercepts it.
 
-Sites still blocked afterwards? Reopen the app and use Settings → **RESET HOSTS NOW**.
+After `Ctrl+Shift+Q` or a crash during an exam, your blocked sites stay blocked in every browser, because the emergency exit skips cleanup. Reopen the app (v0.1.11 and later warn you on startup) and use Settings → **RESET HOSTS FILE NOW**, which asks for one Windows admin prompt.
 
 ## Install
 
