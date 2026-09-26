@@ -41,12 +41,18 @@ Download the `.msi` from [Releases](../../releases/latest). Windows will show a 
 
 ## Privacy
 
-No account, telemetry, or analytics. Settings and camera frames stay on your machine. Opening an exam website uses your internet connection; the optional extension talks to the app over localhost. The only elevated action is writing and restoring your hosts file.
+No account, telemetry, or analytics. Settings and camera frames stay on your machine, and fonts are bundled, so the app never contacts Google. Opening an exam website uses your internet connection; the optional extension talks to the app over localhost. The only elevated action is writing and restoring your hosts file.
 
 ## Feedback
 
 This is early software. [Tell me what happened](../../issues/new/choose) — especially if a website or camera did not appear, or the lock held when you wanted out.
 
+## License
+
+Brutal Focus Lock is proprietary software, free for personal use under the license agreement in [LICENSE.md](LICENSE.md), which the installer also shows. It is not open source: please don't redistribute or re-host the installer — link to this page instead. Open-source components it includes are listed in `THIRD_PARTY_NOTICES.md`, installed next to the app.
+
+Not affiliated with Microsoft or with any school, exam body or learning platform. All trademarks belong to their owners.
+
 ---
 
-© 2026 Faraj Valizada
+Copyright © 2026 Faraj Valizada. All rights reserved.
