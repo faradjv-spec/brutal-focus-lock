@@ -1,6 +1,6 @@
 # Brutal Focus Lock
 
-**Every other focus app asks. This one enforces.**
+**Most focus apps ask. This one is stricter.**
 
 A Windows focus and exam-lockdown tool with a floating timer, optional browser blocking, and stricter exam sessions. You can always use `Ctrl+Shift+Q` as an emergency exit.
 
@@ -10,7 +10,7 @@ A Windows focus and exam-lockdown tool with a floating timer, optional browser b
 
 ## Why this exists
 
-Forest can be closed. Freedom can be uninstalled. Cold Turkey stops at the browser. All of them assume you'll cooperate with yourself. This one is built for the twenty minutes where you won't.
+Most focus tools assume you'll cooperate with yourself. This one is built for the twenty minutes where you won't: in Exam mode it blocks task-switching keys and the sites on your blocklist, and ending a session early takes a typed phrase.
 
 Focus sessions can be stopped from the timer. Exam sessions add a keyboard hook and a panic phrase for ordinary early exit. The emergency shortcut remains available in either mode.
 
@@ -33,15 +33,17 @@ Focus sessions can be stopped from the timer. Exam sessions add a keyboard hook 
 
 Press **`Ctrl+Shift+Q`**. It force-quits everything instantly — no admin prompt, no phrase, and the keyboard hook never intercepts it.
 
-After `Ctrl+Shift+Q` or a crash during an exam, your blocked sites stay blocked in every browser, because the emergency exit skips cleanup. Reopen the app (v0.1.11 and later warn you on startup) and use Settings → **RESET HOSTS FILE NOW**, which asks for one Windows admin prompt.
+After `Ctrl+Shift+Q` or a crash during an exam, your blocked sites can stay blocked in browsers that use Windows' own DNS, because the emergency exit skips cleanup. Reopen the app (v0.1.11 and later warn you on startup) and use Settings → **RESET HOSTS FILE NOW**, which asks for one Windows admin prompt.
 
 ## Install
 
-Download the `.msi` from [Releases](../../releases/latest). Windows will show a SmartScreen warning because the installer isn't code-signed — a certificate costs ~€300/year and this app is free. Click **More info → Run anyway**, and verify the SHA-256 published with each release first if you'd rather not take my word for it.
+Download the `.msi` from [Releases](../../releases/latest). Windows will show a SmartScreen warning because the installer isn't code-signed yet. Click **More info → Run anyway**, and verify the SHA-256 published with each release first if you'd rather not take my word for it.
+
+**v0.2.0 is a [pre-release](../../releases/tag/v0.2.0), not yet tested on real hardware.** If you need certainty for an exam, use the latest regular release instead.
 
 ## Privacy
 
-No account, telemetry, or analytics. Settings and camera frames stay on your machine, and fonts are bundled, so the app never contacts Google. Opening an exam website uses your internet connection; the optional extension talks to the app over localhost. The only elevated action is writing and restoring your hosts file.
+No account, telemetry, or analytics. The app is designed to send nothing to us: settings and camera frames stay on your machine, and fonts are bundled (an automated test checks that the app and site contain no Google Fonts links). Opening an exam website uses your internet connection; the optional extension talks to the app over localhost. The only elevated action is writing and restoring your hosts file.
 
 ## Feedback
 
@@ -55,4 +57,4 @@ Not affiliated with Microsoft or with any school, exam body or learning platform
 
 ---
 
-Copyright © 2026 Faraj Valizada. All rights reserved.
+Copyright © 2026 the Brutal Focus project. All rights reserved.
