@@ -23,27 +23,31 @@ Focus sessions can be stopped from the timer. Exam sessions add a keyboard hook 
 ## The contract
 
 1. The timer is the only clean exit.
-2. Quitting early costs a 25–60 character panic phrase built from your own stated goals.
+2. Quitting an exam early means typing the phrase shown (capitals and extra spaces don't matter). By default it's picked at random from your own phrases and goals, or from built-in phrases if you haven't set any.
 3. The anti-streak never forgets. Only a completed session resets it.
 4. The exam setup shows which browser will open and what blocking is available before you start.
-5. Killing your browser mid-exam starts a 30-second countdown.
+5. Closing your normal browser mid-exam starts a 30-second countdown.
 6. **`Ctrl+Shift+Q` always works.** Safety is never gated.
 
 ## Emergency exit
 
 Press **`Ctrl+Shift+Q`**. It force-quits everything instantly — no admin prompt, no phrase, and the keyboard hook never intercepts it.
 
-After `Ctrl+Shift+Q` or a crash during an exam, your blocked sites can stay blocked in browsers that use Windows' own DNS, because the emergency exit skips cleanup. Reopen the app (v0.1.11 and later warn you on startup) and use Settings → **RESET HOSTS FILE NOW**, which asks for one Windows admin prompt.
+The emergency exit itself skips cleanup, but during an exam with a blocklist the blocking helper notices that the app has closed and removes the blocks from your hosts file on its own. If that fails, your blocked sites can stay blocked in browsers that use Windows' own DNS: reopen the app (it warns you on startup) and use Settings → **RESET HOSTS FILE NOW**, which asks for one Windows admin prompt.
 
 ## Install
 
 Download the `.msi` from [Releases](../../releases/latest). Windows will show a SmartScreen warning because the installer isn't code-signed yet. Click **More info → Run anyway**, and verify the SHA-256 published with each release first if you'd rather not take my word for it.
 
-**v0.2.0 is a [pre-release](../../releases/tag/v0.2.0), not yet tested on real hardware.** If you need certainty for an exam, use the latest regular release instead.
+**Current release: [v0.3.1](../../releases/tag/v0.3.1)** · Windows 10/11, 64-bit. Study files now work in focus sessions as well as exams: add them with the ADD FILES button or by drag and drop, and switch between them from the timer. Each focus session gets a concrete goal and a one-tap check-out (HIT, PARTLY or MISSED), and the study log adds insights, a weekly review, a count of blocked-site attempts (needs the companion extension) and CSV export. Everything stays on your PC.
+
+**Known limitations in v0.3.1:** with 3 or more study files open they alternate left and right, so the third covers the first (use the file switcher on the timer); while an app running as administrator (such as Task Manager) is the active window beside an exam, Windows-key shortcuts work in it; and Win+L still locks the PC.
 
 ## Privacy
 
 No account, telemetry, or analytics. The app is designed to send nothing to us: settings and camera frames stay on your machine, and fonts are bundled (an automated test checks that the app and site contain no Google Fonts links). Opening an exam website uses your internet connection; the optional extension talks to the app over localhost. The only elevated action is writing and restoring your hosts file.
+
+The optional camera self-view is off by default. It shows video only, with no audio, in the session timer window. No code path records, saves or sends camera frames. Every way a session ends turns the camera off: the timer running out, stopping a focus session, the exit phrase, and the countdown after you close your browser mid-exam.
 
 ## Feedback
 
