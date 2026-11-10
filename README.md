@@ -39,9 +39,9 @@ The emergency exit itself skips cleanup, but during an exam with a blocklist the
 
 Download the `.msi` from [Releases](../../releases/latest). Windows will show a SmartScreen warning because the installer isn't code-signed yet. Click **More info → Run anyway**, and verify the SHA-256 published with each release first if you'd rather not take my word for it.
 
-**Current release: [v0.3.1](../../releases/tag/v0.3.1)** · Windows 10/11, 64-bit. Study files now work in focus sessions as well as exams: add them with the ADD FILES button or by drag and drop, and switch between them from the timer. Each focus session gets a concrete goal and a one-tap check-out (HIT, PARTLY or MISSED), and the study log adds insights, a weekly review, a count of blocked-site attempts (needs the companion extension) and CSV export. Everything stays on your PC.
+**Current release: [v0.3.2](../../releases/tag/v0.3.2)** · Windows 10/11, 64-bit. A simpler home screen: goal, length and START, with study files, the URL field and extension setup under MORE. Sessions you escape from (Ctrl+Shift+Q, a crash, closing the window) are now recorded as abandoned the next time you open the app. Your history is backed up before anything can overwrite it and now keeps 2000 sessions. Tips also use what happened in your sessions: abandoned sessions, blocked-site attempts, quit times and skipped check-outs. Space only starts a session: stop with the STOP button, and leave an exam with ABORT and the exit phrase. Everything stays on your PC.
 
-**Known limitations in v0.3.1:** with 3 or more study files open they alternate left and right, so the third covers the first (use the file switcher on the timer); while an app running as administrator (such as Task Manager) is the active window beside an exam, Windows-key shortcuts work in it; and Win+L still locks the PC.
+**Known limitations in v0.3.2:** with 3 or more study files open they alternate left and right, so the third covers the first (use the file switcher on the timer); while an app running as administrator (such as Task Manager) is the active window beside an exam, Windows-key shortcuts work in it; and Win+L still locks the PC.
 
 ## Privacy
 
