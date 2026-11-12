@@ -2,7 +2,7 @@
 
 Copyright © 2026 the Brutal Focus project. All rights reserved.
 
-Version 1.3 · Effective 27 October 2026 · Applies to the Brutal Focus Lock v0.3.2 Windows release and its companion extension (together, "the Software"). Older releases retain the agreement supplied with their installer.
+Version 1.3 · Effective 27 October 2026 · Applies to the Brutal Focus Lock v0.3.3 Windows release and its companion extension (together, "the Software"). Older releases retain the agreement supplied with their installer.
 
 By installing or using the Software you agree to this Agreement. If you do not agree, do not install or use it.
 
